@@ -199,29 +199,9 @@
 </section>
 
 {% comment %} Kyan {% endcomment %}
-
-<section class="birthdates">
-  <button class="btnleft">left</button>
-    <h3>1971</h3>
-    <h3>1973</h3>
-    <h3>1984</h3>
-    <h3>1990</h3>
-    <h3>1994</h3>
-    <h3>1999</h3>
-    <h3>2000</h3>
-    <h3>2001</h3>
-    <h3>2002</h3>
-    <h3>2003</h3>
-    <h3>2004</h3>
-    <h3>2005</h3>
-    <h3>2006</h3>
-    <h3>2007</h3>
-  <button class="btnright">right</button>
   
-  <div class="slidecontainer">
-    <input type="range" min="1970" max="2010" value="1970" class="slider" id="myRange">
-  </div>
-
-</section>
+  <section class="slidecontainer">
+    <input class="slider" type="range" min="1970" max="2010" value="1970" class="slider" id="myRange">
+  </section>
 
 {% render 'views/end.liquid', squads: squads %}
