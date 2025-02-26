@@ -1,0 +1,91 @@
+:root {
+    --dark-color:#66E5BF;
+    --light-color:#050542;
+
+    /* Font size voor FDND jaar 1 & Geboortejaar */
+
+    --font-size-xxl-desktop:128px;
+    --font-size-xxl-ipad:96px;
+    --font-size-xxl-mobile:48px;
+
+    /* Font size voor Person name & Person bio */
+
+    --font-size-xl-desktop:64px;
+    --font-size-xl-ipad:48px;
+    --font-size-xl-mobile:24px;
+}
+
+h1 {
+    font-family: maniac;
+}
+
+h2 {
+    font-family: maniac;
+}
+
+h3 {
+    font-family: arial;
+}
+
+h4 {
+    font-family: arial;
+}
+
+h5 {
+    font-family: arial;
+}
+
+p {
+    font-family: arial;
+}
+
+@font-face {
+    font-family: 'maniac';
+    src: url('/font/Maniac.ttf') format('truetype');
+}
+
+* {
+    font-family: maniac;
+}
+
+.carrousel section {
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+    gap: 1em;
+    height: 10em;
+    display: none;
+
+    article {
+        border-radius: 1em;
+        p {
+            display: none;
+        }
+
+        :hover~ p {
+            display: block;
+            position: relative;
+            top: -5em;
+            left: 1em;
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 1em;
+            border-radius: 1em;
+        }
+
+        img {
+            object-fit: contain;
+            border-radius: 1em;
+        }
+    }
+}
+
+.year {
+    height: 4em;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.y1971 {
+    display: block;
+}

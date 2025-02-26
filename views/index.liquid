@@ -1,178 +1,171 @@
 {% render 'views/head.liquid', title: 'Squad page' %}
 
+<style> 
+.carrousel section article {
+  border: solid 4px {{ person.fav_color }};
+  border-radius: 1em;
+  } 
+</style>
+
 
 {% comment %} Miel {% endcomment %}
 
 <section class="carrousel">
-  <button>1971</button>
-  <button>1973</button>
-  <button>1984</button>
-  <button>1990</button>
-  <button>1994</button>
-  <button>1999</button>
-  <button>2000</button>
-  <button>2001</button>
-  <button>2002</button>
-  <button>2003</button>
-  <button>2004</button>
-  <button>2005</button>
-  <button>2006</button>
-  <button>2007</button>
+  <section class="y1971">
+    {% for person in ninetySeventyOne %}
+      <article>
+        <a>  <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
+  <hr>
 
-<section class="y1971">
-  {% for person in ninetySeventyOne %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y1973">
+    {% for person in ninetySeventyThree %}
+      <article>
+      <a> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y1973">
-  {% for person in ninetySeventyThree %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y1984">
+    {% for person in ninetyEightyFour %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y1984">
-  {% for person in ninetyEightyFour %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y1990">
+    {% for person in ninetyNinety %}
+      <article>  
+        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y1990">
-  {% for person in ninetyNinety %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y1994">
+    {% for person in ninetyNinetyFour %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y1994">
-  {% for person in ninetyNinetyFour %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y1999">
+    {% for person in ninetyNinetyNine %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y1999">
-  {% for person in ninetyNinetyNine %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2000">
+    {% for person in twoThousands %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2000">
-  {% for person in twoThousands %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2001">
+    {% for person in twoThousandOne %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2001">
-  {% for person in twoThousandOne %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2002">
+    {% for person in twoThousandTwo %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2002">
-  {% for person in twoThousandTwo %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2003">
+    {% for person in twoThousandThree %}
+      <article>
+        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2003">
-  {% for person in twoThousandThree %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2004">
+    {% for person in twoThousandFour %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2004">
-  {% for person in twoThousandFour %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2005">
+    {% for person in twoThousandFive %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2005">
-  {% for person in twoThousandFive %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2006">
+    {% for person in twoThousandSix %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
+  <hr>
 
-<section class="y2006">
-  {% for person in twoThousandSix %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
+  <section class="y2007">
+    {% for person in twoThousandSeven %}
+      <article>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </section>
 
-<hr>
-
-<section class="y2007">
-  {% for person in twoThousandSeven %}
-    <article>
-    <li> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a></li>
-    <p> {{ person.name }} </p>
-    </article>
-  {% endfor %}
-</section>
-
-
+  <section class="year">
+    <h2>1970</h2>
+  </section>
 </section>
 
 {% comment %} Kate {% endcomment %}

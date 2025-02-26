@@ -106,9 +106,3 @@ if (teamName == '') {
     console.log(`Application started on http://localhost:${app.get('port')}`)
   })
 }
-
-// slider waar de waarde bepaald soorten articles toont
-slideContainer = document.querySelector(.slidecontainer);
-
-
-
