@@ -93,8 +93,8 @@ if (teamName == '') {
   })
 }
 
+
 // slider waar de waarde bepaald soorten articles toont
 // slideContainer = document.querySelector(.slidecontainer);
-
 
 
