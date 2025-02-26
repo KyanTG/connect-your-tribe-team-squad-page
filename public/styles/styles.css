@@ -1,0 +1,16 @@
+body {
+    --dark-color:#66E5BF;
+    --light-color:#050542;
+
+    /* Font size voor FDND jaar 1 & Geboortejaar */
+
+    --font-size-xxl-desktop:128px;
+    --font-size-xxl-ipad:96px;
+    --font-size-xxl-mobile:48px;
+
+    /* Font size voor Person name & Person bio */
+
+    --font-size-xl-desktop:64px;
+    --font-size-xl-ipad:48px;
+    --font-size-xl-mobile:24px;
+}
