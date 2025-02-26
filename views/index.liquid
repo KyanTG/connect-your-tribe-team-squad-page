@@ -20,7 +20,6 @@
   <button>2007</button>
 
 
-{% comment %} alle articles van 1971 {% endcomment %}
 <section class="y1971">
   {% for person in ninetySeventyOne %}
     <article>
@@ -147,20 +146,17 @@
   {% endfor %}
 </section>
 
+  <div class="slidecontainer">
+    <input type="range" min="1970" max="2010" value="1970" class="slider" id="myRange">
+  </div>
 
-
-
-<div class="container">
-  <p>Scroll</p>
-</div>
 </section>
 
 {% comment %} Kate {% endcomment %}
-
 <div>
-<img src="{{ person.avatar }}" width="150px">
-<p>{{ person.name }}</p>
-<p>{{ person.bio }}</p>
+  <img src="{{ person.avatar }}" width="150px">
+  <p>{{ person.name }}</p>
+  <p>{{ person.bio }}</p>
 </div>
 
 <h2>Comments</h2>
