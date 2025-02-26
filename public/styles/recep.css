@@ -1,0 +1,14 @@
+body {
+    margin: 0;
+}
+
+header {
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    width: 100vw;
+    padding: 20px;
+    h1 {
+        text-align: center;
+        font-size: var(--font-size-xxl-ipad);
+    }
+}   
