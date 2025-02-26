@@ -1,172 +1,143 @@
 {% render 'views/head.liquid', title: 'Squad page' %}
 
-<style> 
-.carrousel section article {
-  border: solid 4px {{ person.fav_color }};
-  border-radius: 1em;
-  } 
-</style>
+
 
 
 {% comment %} Miel {% endcomment %}
 
 <section class="carrousel">
-  <section class="y1971">
+  <div class="y1971">
     {% for person in ninetySeventyOne %}
       <article>
-        <a>  <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+        <a>  <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y1973">
+  <div class="y1973">
     {% for person in ninetySeventyThree %}
       <article>
-      <a> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+      <a> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y1984">
+  <div class="y1984">
     {% for person in ninetyEightyFour %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y1990">
+  <div class="y1990">
     {% for person in ninetyNinety %}
       <article>  
-        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y1994">
+  <div class="y1994">
     {% for person in ninetyNinetyFour %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y1999">
+  <div class="y1999">
     {% for person in ninetyNinetyNine %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2000">
+  <div class="y2000">
     {% for person in twoThousands %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2001">
+  <div class="y2001">
     {% for person in twoThousandOne %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2002">
+  <div class="y2002">
     {% for person in twoThousandTwo %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2003">
+  <div class="y2003">
     {% for person in twoThousandThree %}
       <article>
-        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
 
-  <section class="y2004">
+  <div class="y2004">
     {% for person in twoThousandFour %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2005">
+  <div class="y2005">
     {% for person in twoThousandFive %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
-
-  <section class="y2006">
+  <div class="y2006">
     {% for person in twoThousandSix %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
+  </div>
 
-  <hr>
 
-  <section class="y2007">
+  <div class="y2007">
     {% for person in twoThousandSeven %}
       <article>
-       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"></a>
+       <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"style="border: 5px {{ person.fav_color }} solid"></a>
       <p> {{ person.name }} </p>
       </article>
     {% endfor %}
-  </section>
-
-  <section class="year">
-    <h2>1970</h2>
-  </section>
+  </div>
 </section>
+
+<div class="year">
+    <h2>1970</h2>
+</div>
 
 {% comment %} Kate {% endcomment %}
 <div>
