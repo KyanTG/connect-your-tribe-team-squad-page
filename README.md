@@ -18,6 +18,7 @@ Bij de desbetreffende persoon kan je ook een bericht achter laten. Dit bericht k
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
+Met NodeJS wordt in dit project worden de namen en profielfotos ingeladen op volgorde van iedereens verjaardag. er wordt ook een border laten zien in de favoriete kleur van de persoon. Er is een functie om comments toe te voegen op de pagina, gemaakt met een POST route. Met liquid wordt de HTML gerenderd.
 
 ## Installatie
 <!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
