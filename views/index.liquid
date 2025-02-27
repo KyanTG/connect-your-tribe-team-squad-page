@@ -1,12 +1,10 @@
 {% render 'views/head.liquid', title: 'Squad page' %}
-
-
-
-
 {% comment %} Miel {% endcomment %}
 
 <section class="carrousel">
-  <div class="y1971">
+
+<div class="hidden">
+  <div>
     {% for person in ninetySeventyOne %}
       <article>
         <a>  <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -14,8 +12,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y1973">
+<div class="hidden">
+  <div>
     {% for person in ninetySeventyThree %}
       <article>
       <a> <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -23,8 +23,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y1984">
+<div class="hidden">
+  <div>
     {% for person in ninetyEightyFour %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -32,8 +34,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y1990">
+<div class="hidden">
+  <div>
     {% for person in ninetyNinety %}
       <article>  
         <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -41,8 +45,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="y1994">
+<div class="hidden">
+  <div>
     {% for person in ninetyNinetyFour %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -50,8 +56,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y1999">
+<div class="hidden">
+  <div>
     {% for person in ninetyNinetyNine %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -59,8 +67,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y2000">
+<div class="hidden">
+  <div>
     {% for person in twoThousands %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -68,8 +78,10 @@
       </article>
     {% endfor %}
   </div>
+</div>
 
-  <div class="y2001">
+<div class="hidden">
+  <div>
     {% for person in twoThousandOne %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -77,8 +89,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="y2002">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandTwo %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -86,8 +100,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="y2003">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandThree %}
       <article>
         <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -95,9 +111,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-
-  <div class="y2004">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandFour %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -105,8 +122,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="y2005">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandFive %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}" style="border: 5px {{ person.fav_color }} solid"></a>
@@ -114,8 +133,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-  <div class="y2006">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandSix %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"style="border: 5px {{ person.fav_color }} solid"></a>
@@ -123,9 +144,10 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 
-
-  <div class="y2007">
+  <div class="hidden">
+  <div>
     {% for person in twoThousandSeven %}
       <article>
        <img src="{{ person.avatar }}" width="150px" href="/student/{{ person.id }}"style="border: 5px {{ person.fav_color }} solid"></a>
@@ -133,9 +155,11 @@
       </article>
     {% endfor %}
   </div>
+  </div>
 </section>
 
 <div class="year">
+  {% comment %} hier komt de waarde die ook zichtbaar is op de slider {% endcomment %}
     <h2>1970</h2>
 </div>
 

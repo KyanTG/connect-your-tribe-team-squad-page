@@ -17,7 +17,7 @@
 
 @font-face {
     font-family: 'maniac';
-    src: url('/font/Maniac.ttf') format('truetype');
+    src: url('./font/Maniac.ttf') format('truetype');
 }
 
 h1 {
@@ -44,76 +44,76 @@ p {
     font-family: arial;
 }
 
-.carrousel {
-    display:
-}
-
 .carrousel div {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    height: 10em;
-    background-color: var(--light-color);
+    padding: -2em;
 
-    article {
-        border-radius: 1em;
-        position: relative;
-        z-index: 1;
+    div {
+        display: flex;
+        justify-content: center;
+        gap: 1em;
+        height: 10em;
+        background-color: var(--light-color);
 
-        p {
-            display: none;
-        }
-
-        :hover ~ .carrousel div {
-            background-color: black;
-        }
-
-        :hover ~ article {
-            opacity: 1;
-            z-index: 2;
-        }
-
-        :hover ~ p {
-            display: block;
-            background-color: var(--light-color);
-            color: var(--dark-color);
-            padding: 0.4em;
+        article {
             border-radius: 1em;
-            top: -10px;
-            border: var(--dark-color) solid 2px;
-            animation: scale 0.3s linear;
-            text-align: center;
-        }
+            position: relative;
+            z-index: 1;
+            animation: slotmachine 0.3s ease-in forwards;
 
-        img {
-            object-fit: contain;
-            border-radius: 1em;
-            height: 150px;
-            width: 150px;
-            opacity: 0.7;
+            p {
+                display: none;
+            }
+
+            :hover ~ .carrousel div {
+                background-color: black;
+            }
+
+            :hover ~ article {
+                opacity: 1;
+                z-index: 2;
+            }
+
+            :hover ~ p {
+                display: block;
+                background-color: var(--light-color);
+                color: var(--dark-color);
+                padding: 0.4em;
+                border-radius: 1em;
+                top: -10px;
+                border: var(--dark-color) solid 2px;
+                animation: scale 0.3s linear;
+                text-align: center;
+            }
+
+            img {
+                object-fit: contain;
+                border-radius: 1em;
+                height: 150px;
+                width: 150px;
+                opacity: 0.7;
+
+                @media (max-width:700px) {
+                    height: 8em;
+                    width: 8em;
+                }
+            }
+            img:hover {
+                opacity: 1;
+            }
 
             @media (max-width:700px) {
                 height: 8em;
-                width: 8em;
             }
         }
-        img:hover {
-            opacity: 1;
+
+        article:hover {
+            animation: scale2 0.4s forwards;
+            
         }
-
-        @media (max-width:700px) {
-            height: 8em;
-        }
-    }
-
-    article:hover {
-        animation: scale2 0.4s forwards;
-        
-    }
-
-
+}
 }
 
+/* keyframes */
 @keyframes scale {
     0% {
         scale: 0.5;
@@ -138,12 +138,28 @@ p {
     }
 }
 
+@keyframes slotmachine {
+    0% {
+        transform: translate(0,5em);
+        
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
 .year {
     height: 4em;
     background-color: var(--light-color);
     color: var(--light-color);
 }
 
-.y1971 + .y1971 article {
+
+.hidden {
     display: none;
+}
+
+.hidden:nth-of-type(12) {
+    display: block;
 }
