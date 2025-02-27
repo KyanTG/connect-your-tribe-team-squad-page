@@ -15,17 +15,18 @@
     --font-size-xl-mobile:24px;
 }
 
-@font-face {
-    font-family: 'maniac';
-    src: url('./font/Maniac.ttf') format('truetype');
+body {
+    background-color: var(--dark-color);
 }
 
 h1 {
-    font-family: maniac;
+    font-family: "Maniac";
+    font-size: var(--font-size-xxl-desktop)
 }
 
 h2 {
-    font-family: maniac;
+    font-family: "Maniac";
+    font-size: var(--font-size-xxl-desktop);
 }
 
 h3 {
@@ -45,14 +46,14 @@ p {
 }
 
 .carrousel div {
-    padding: -2em;
+    position: relative;
 
     div {
         display: flex;
         justify-content: center;
         gap: 1em;
-        height: 10em;
-        background-color: var(--light-color);
+        height: 12em;
+
 
         article {
             border-radius: 1em;
@@ -79,10 +80,12 @@ p {
                 color: var(--dark-color);
                 padding: 0.4em;
                 border-radius: 1em;
-                top: -10px;
+                top: -220px;
                 border: var(--dark-color) solid 2px;
                 animation: scale 0.3s linear;
                 text-align: center;
+                position: relative;
+
             }
 
             img {
@@ -91,6 +94,7 @@ p {
                 height: 150px;
                 width: 150px;
                 opacity: 0.7;
+                filter:grayscale(100%);
 
                 @media (max-width:700px) {
                     height: 8em;
@@ -99,6 +103,7 @@ p {
             }
             img:hover {
                 opacity: 1;
+                filter:grayscale(0);
             }
 
             @media (max-width:700px) {
@@ -140,26 +145,55 @@ p {
 
 @keyframes slotmachine {
     0% {
-        transform: translate(0,5em);
+        transform: translate(0,10em);
         
     }
 
     100% {
-        transform: translate(0);
+        transform: translate(0, 1em);
+    }
+}
+
+@keyframes slotmachine-above {
+    0% {
+        transform: translate(0,-10em);
+        
+    }
+
+    100% {
+        transform: translate(0, 1em);
     }
 }
 
 .year {
-    height: 4em;
+    height: 15em;
     background-color: var(--light-color);
-    color: var(--light-color);
-}
+    color: var(--dark-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
 
+    h2 {
+        margin-top: 0.2em;
+    }
+}
 
 .hidden {
     display: none;
 }
 
-.hidden:nth-of-type(12) {
+.hidden:nth-of-type(10) {
     display: block;
+}
+
+
+@font-face {
+    font-family: "Maniac";
+    src: url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.eot");
+    src: url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/aec9e02164e61b827e28611f667cda2f.svg#Maniac Regular")format("svg");
 }
