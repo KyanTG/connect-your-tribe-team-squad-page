@@ -1,9 +1,3 @@
-# Squad Page
-Ontwerp en maak samen met je team een website met NodeJS, Express, JSON en Liquid
-
-
-
-
 # Squad page
 
 Ontwerp en maak met een team een website met NodeJS en JSON.
