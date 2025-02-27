@@ -35,6 +35,7 @@ app.get('/', async function (request, response) {
   const twoThousandSixResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["2006-01-01","2006-12-31"]}}]}')
   const twoThousandSevenResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["2007-01-01","2007-12-31"]}}]}') 
 
+
   const ninetySeventyOneResponseJSON = await ninetySeventyOneResponse.json()
   const ninetySeventyThreeResponseJSON = await ninetySeventyThreeResponse.json()
   const ninetyEightyFourResponseJSON = await ninetyEightyFourResponse.json()
