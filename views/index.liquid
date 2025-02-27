@@ -164,12 +164,14 @@
 </div>
 
 {% comment %} Kate {% endcomment %}
-<div>
-  <img src="{{ person.avatar }}" width="150px">
+<div class="person">
+  <img src="{{ person.avatar }}" width="300px" style="border: 10px {{ person.fav_color }} solid">
   <p>{{ person.name }}</p>
   <p>{{ person.bio }}</p>
 </div>
 
+
+<div class="comments">
 <h2>Comments</h2>
 
 {% for message in messages %}
@@ -179,7 +181,7 @@
 {% endfor %}
 
  <section>
-<h2>Voeg een bericht toe</h2>
+<h3>Voeg een bericht toe</h3>
   <form method="post" action="/">
     <label>
       Naam:
@@ -192,6 +194,7 @@
     <button type="submit">Verstuur</button>
   </form>
 </section>
+</div>
 
 {% comment %} Kyan {% endcomment %}
   

@@ -1,0 +1,18 @@
+.person{
+    max-width: 50%;
+    text-align: center;
+    align-items: center;
+}
+
+.comments{
+    max-width: 50%;
+    text-align: center;
+    position: relative;
+    float: right;
+    border: 5px inset var(--light-color);
+}
+
+h3{
+    font-family: "Maniac";
+    font-size: var(--font-size-xl-desktop);
+}
