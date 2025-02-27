@@ -75,11 +75,27 @@ app.get('/', async function (request, response) {
   })
 })
 
-app.post('/', async function (request, response) {
+app.get('/student/:id', async function (request, response) {
+  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
+
+  const personDetailResponseJSON = await personDetailResponse.json()
+  const messagesResponseJSON = await messagesResponse.json()
+
+  response.render('student.liquid', {
+    person: personDetailResponseJSON.data,
+    teamName: teamName,
+    messages: messagesResponseJSON.data,
+  })
+})
+
+app.post('/student/:id', async function (request, response) {
+  const studentID = request.params.id; // Haal de ID op uit de URL
+
   await fetch('https://fdnd.directus.app/items/messages/', {
     method: 'POST',
     body: JSON.stringify({
-      for: `Team ${teamName}`,
+      for: `Team ${teamName}`, // Teamnaam blijft behouden
       from: request.body.from,
       text: request.body.text
     }),
@@ -88,16 +104,8 @@ app.post('/', async function (request, response) {
     }
   });
 
-  response.redirect(303, '/')
+  response.redirect(303, `/student/${studentID}`); // Redirect naar de juiste studentpagina
 })
-
-app.get('/student/:id', async function (request, response) {
-  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
-  const personDetailResponseJSON = await personDetailResponse.json()
-  
-  response.render('student.liquid', {person: personDetailResponseJSON.data})
-})
-
 
 app.set('port', process.env.PORT || 8000)
 
