@@ -202,7 +202,18 @@
 </div>
 
 {% comment %} Kyan {% endcomment %}
-  
 
+<section class="slidecontainer">
+  <section class="sliderinfo">
+      <input type="range" min="1970" max="2010" value="1970" class="slider" class="slider"
+      oninput="SliderYear()">
+
+      {% comment %} div Yearslider is bedoelt om het jaartal te laten zien zodra je slide, in CSS en JS. {% endcomment %}
+
+      <div class="yearslider"></div>
+  </section>
+</section>
+
+<script src="slider.js"></script>
 
 {% render 'views/end.liquid', squads: squads %}

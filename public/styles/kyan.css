@@ -1,0 +1,61 @@
+body {
+    margin: 0;
+}
+
+.slidecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    background-color: var(--light-color) ;
+
+    @media ( min-width: 1080px ) {
+        height: 300px;
+    }
+
+    @media ( min-width: 1920px ) {
+        height: 500px;
+    }
+
+    .sliderinfo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    
+        .yearslider {
+            position: absolute;
+
+            /* test color for javascrippt */
+
+            background-color: red;
+            color: white;
+            transform: translateX(-50%) translateY(-50%);
+            padding: 1rem;
+            font-size: 32px;
+        }
+}
+
+
+
+.slidecontainer input {
+    -webkit-appearance:none;
+    border-radius: 50px;
+    padding-inline: 5px;
+    width: 40%;
+    height: 25px;
+    background-color: var(--dark-color);
+
+}
+
+.slidecontainer input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    background-color: var(--light-color) ;
+    border-radius: 30px;
+}
