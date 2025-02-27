@@ -1,0 +1,36 @@
+{% render 'views/head.liquid', title: 'Squad page' %}
+
+{% comment %} Recep ( overgenomen) {% endcomment %}
+<div class="person">
+  <img src="{{ person.avatar }}" width="300px" style="border: 10px {{ person.fav_color }} solid">
+  <p>{{ person.name }}</p>
+  <p>{{ person.bio }}</p>
+</div>
+
+
+<div class="comments">
+<h2>Comments</h2>
+
+{% for message in messages %}
+<p>{{ message.from }}: {{ message.text }} @{{ message.created | date: '%d-%m-%Y %H:%M' }}</p>
+{% else %}
+<p>Er zijn nog geen berichten voor dit team.</p>
+{% endfor %}
+
+ <section>
+    <h3>Voeg een bericht toe</h3>
+    <form method="post" action="/">
+        <label>
+        Naam:
+        <input type="text" name="from" required>
+        </label>
+        <label>
+        Bericht:
+        <textarea name="text" required></textarea>
+        </label>
+        <button type="submit">Verstuur</button>
+    </form>
+</section>
+</div>
+
+{% render 'views/foot.liquid', squads: squads %}
