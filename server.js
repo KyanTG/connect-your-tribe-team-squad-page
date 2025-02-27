@@ -4,7 +4,8 @@ import { Liquid } from 'liquidjs';
 
 
 // Vul hier jullie team naam in
-const teamName = 'chill';
+const teamName = 'Chill';
+
 
 const app = express()
 
@@ -19,6 +20,7 @@ app.use(express.urlencoded({extended: true}))
 
 
 app.get('/', async function (request, response) {
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
   const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
   const ninetySeventyOneResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["1971-01-01","1971-12-31"]}}]}')
   const ninetySeventyThreeResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["1973-01-01","1973-12-31"]}}]}')
@@ -35,7 +37,7 @@ app.get('/', async function (request, response) {
   const twoThousandSixResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["2006-01-01","2006-12-31"]}}]}')
   const twoThousandSevenResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["2007-01-01","2007-12-31"]}}]}') 
 
-
+  const messagesResponseJSON = await messagesResponse.json()
   const ninetySeventyOneResponseJSON = await ninetySeventyOneResponse.json()
   const ninetySeventyThreeResponseJSON = await ninetySeventyThreeResponse.json()
   const ninetyEightyFourResponseJSON = await ninetyEightyFourResponse.json()
@@ -51,8 +53,10 @@ app.get('/', async function (request, response) {
   const twoThousandSevenResponseJSON = await twoThousandSevenResponse.json()
   const personResponseJSON = await personResponse.json()
   const twoThousandResponseJSON = await twoThousandResponse.json()
-  
+
   response.render('index.liquid', {
+    teamName: teamName,
+    messages: messagesResponseJSON.data,
     persons: personResponseJSON.data, 
     ninetySeventyOne: ninetySeventyOneResponseJSON.data,
     ninetySeventyThree: ninetySeventyThreeResponseJSON.data,
@@ -67,16 +71,7 @@ app.get('/', async function (request, response) {
     twoThousandFour: twoThousandFourResponseJSON.data,
     twoThousandFive: twoThousandFiveResponseJSON.data,
     twoThousandSix: twoThousandSixResponseJSON.data,
-    twoThousandSeven: twoThousandSevenResponseJSON.data })
-})
-
-app.get('/', async function (request, response) {
-  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
-  const messagesResponseJSON = await messagesResponse.json()
-
-  response.render('index.liquid', {
-    teamName: teamName,
-    messages: messagesResponseJSON.data
+    twoThousandSeven: twoThousandSevenResponseJSON.data
   })
 })
 
@@ -96,6 +91,13 @@ app.post('/', async function (request, response) {
   response.redirect(303, '/')
 })
 
+app.get('/student/:id', async function (request, response) {
+  const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
+  const personDetailResponseJSON = await personDetailResponse.json()
+  
+  response.render('student.liquid', {person: personDetailResponseJSON.data})
+})
+
 
 app.set('port', process.env.PORT || 8000)
 
@@ -107,6 +109,3 @@ if (teamName == '') {
   })
 }
 
-
-// slider waar de waarde bepaald soorten articles toont
-// slideContainer = document.querySelector(.slidecontainer);
