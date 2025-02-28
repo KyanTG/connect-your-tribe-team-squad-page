@@ -21,7 +21,10 @@ In het begin hebben we het doel besproken en iedereen zijn vaardigheden besproke
 ## Stand-up
 Aan het begin de week hebben we een stand-up vergadering gehad waar we onze plannen hebben besproken voor de komende week en de problemen waar wij tegen aan liepen. 
 
+Hier kwam uit dat we zelf tegen het probleem aan liepen van het coderen en sommige design kwesties.
+
 ##Meteafoor
+Aan het einde van de sprint hebben we samen een meteafoor gemaakt wat de samenwerking in een spreekwoord beschrijft, en die luidt: "Alle wegen leiden naar Rome".
 
 ![image](https://github.com/user-attachments/assets/491bbdb0-0150-4f04-a683-b7a16bb0af03)
 
