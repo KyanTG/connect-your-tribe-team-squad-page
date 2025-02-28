@@ -250,13 +250,14 @@ p {
 /* jaar en slider */
 
 .year {
-    height: 15em;
+    /* height: 15em; */
     background-color: var(--light-color);
     color: var(--dark-color);
     display: flex;
     justify-content: center;
     position: relative;
     z-index: 2;
+    gap: 100px;
 
     h2 {
         margin-top: 0.2em;

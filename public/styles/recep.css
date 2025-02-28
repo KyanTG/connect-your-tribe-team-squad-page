@@ -57,3 +57,14 @@ form {
       }
 }
 
+.yearof a {
+  text-decoration: none;
+  color: var(--dark-color);
+  cursor: pointer;
+}
+
+.active {
+  border: 2px solid var(--dark-color);
+  padding-inline: 15px;
+  border-radius: 25px;
+}

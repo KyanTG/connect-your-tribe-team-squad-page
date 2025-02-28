@@ -1,0 +1,46 @@
+{% render 'views/head.liquid', title: 'Squad page' %}
+{% comment %} Miel {% endcomment %}
+
+<section class="carrousel">
+
+  <div class="y2004">
+
+  <div>
+    {% for person in twoThousandFour %}
+      <article>
+        <a href="/student/{{ person.id }}"><img src="{{ person.avatar }}" width="150px" style="border: 5px {{ person.fav_color }} solid"></a>
+      <p> {{ person.name }} </p>
+      </article>
+    {% endfor %}
+  </div>
+  </div>
+
+<div class="year">
+  {% comment %} hier komt de waarde die ook zichtbaar is op de slider {% endcomment %}
+    <h2 class="yearof"><a href="/">2003</a></h2>
+    <h2 class="active yearof"> <a href="/ofour">2004</a></h2>
+
+    {% comment %} <section class="slidecontainer">
+      <input class="slider" type="range" min="1970" max="2010" value="1970" class="slider" id="sliderControl">
+    </section> {% endcomment %}
+
+</div>
+
+
+
+{% comment %} Kyan {% endcomment %}
+
+<section class="slidecontainer">
+  <section class="sliderinfo">
+      <input type="range" min="1970" max="2010" value="1970" class="slider" class="slider"
+      oninput="SliderYear()">
+
+      {% comment %} div Yearslider is bedoelt om het jaartal te laten zien zodra je slide, in CSS en JS. {% endcomment %}
+
+      <div class="yearslider"></div>
+  </section>
+</section>
+
+<script src="slider.js"></script>
+
+{% render 'views/foot.liquid', squads: squads %}

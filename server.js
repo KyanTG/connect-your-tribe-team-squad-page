@@ -75,6 +75,23 @@ app.get('/', async function (request, response) {
   })
 })
 
+app.get('/ofour', async function (request, response) {
+  const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
+  const personResponse = await fetch('https://fdnd.directus.app/items/person/?sort=name&fields=*,squads.squad_id.name,squads.squad_id.cohort&filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}}]}')
+  const twoThousandFourResponse = await fetch('https://fdnd.directus.app/items/person/?filter={"_and":[{"squads":{"squad_id":{"tribe":{"name":"FDND Jaar 1"}}}},{"squads":{"squad_id":{"cohort":"2425"}}},{"birthdate":{"_between":["2004-01-01","2004-12-31"]}}]}')
+
+  const messagesResponseJSON = await messagesResponse.json()
+  const twoThousandFourResponseJSON = await twoThousandFourResponse.json()
+  const personResponseJSON = await personResponse.json()
+
+  response.render('ofour.liquid', {
+    teamName: teamName,
+    messages: messagesResponseJSON.data,
+    persons: personResponseJSON.data, 
+    twoThousandFour: twoThousandFourResponseJSON.data,
+  })
+})
+
 app.get('/student/:id', async function (request, response) {
   const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
   const messagesResponse = await fetch(`https://fdnd.directus.app/items/messages/?filter={"for":"Team ${teamName}"}`)
