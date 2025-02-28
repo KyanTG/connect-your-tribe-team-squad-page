@@ -1,6 +1,7 @@
-# Squad page
+# Squad page team Chill
+![image](https://github.com/user-attachments/assets/b3fada03-0a0f-4eeb-a095-c72c6d1fc516)
 
-Ontwerp en maak met een team een website met NodeJS en JSON.
+The birthyear in one overlook!
 
 ## Inhoudsopgave Squad page
 
