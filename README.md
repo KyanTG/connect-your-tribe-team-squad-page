@@ -39,7 +39,8 @@ Bij de desbetreffende persoon kan je ook een bericht achter laten. Dit bericht k
 Met NodeJS wordt in dit project worden de namen en profielfotos ingeladen op volgorde van iedereens verjaardag. er wordt ook een border laten zien in de favoriete kleur van de persoon. Er is een functie om comments toe te voegen op de pagina, gemaakt met een POST route. Met liquid wordt de HTML gerenderd.
 
 ## Installatie
-<!-- Bij Installatie staat stap-voor-stap beschreven hoe je de development omgeving moet inrichten om aan de repository te kunnen werken. -->
+Bij het clonen of forken van de repo, kan je de server niet gelijk starten en de pagina bekijken, hier zal ik het stap voor stap uitleggen.
+Aller eerst clone je de repo naar je desktop, open de code in vs code > Navigeer naar het terminal tab en open een nieuwe terminal > Als je ziet dat je in de juiste folder path zit, dan zullen we de node_modules installeren om de express server te laten draaien. Voer hier de command 'npm install' uit ( alle benodigde bestanden worden dan geinstalleerd ) > nu kun je de server starten door de command 'npm start' uit, als het goed is zie nu een tekst zoals 'Application started on https://localhost:800' GEFELICITEERD, nou kun je via dit URL op je browser de website bekijken.
 
 ## Gebruik
 
