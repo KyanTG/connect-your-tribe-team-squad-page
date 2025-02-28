@@ -12,10 +12,19 @@ The birthyear in one overlook!
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-##
+## Team Canvas
 
+![image](https://github.com/user-attachments/assets/fe5d9542-a640-405e-8424-a8465a8fb3da)
+
+In het begin hebben we het doel besproken en iedereen zijn vaardigheden besproken. Dit om een goede samenwerking tegemoet te komen. Het doel was om een creatieve ontwerp en de filter functie toepassen op de website. De eerste week werkte we individueel aan een ontwerp en hebben we allemaal onze eigen schetsen uitgewerkt. Aan het einde van de week hebben we besproken welk design we van de 4 designs gaat toepassen.
 
 ## Stand-up
+Aan het begin de week hebben we een stand-up vergadering gehad waar we onze plannen hebben besproken voor de komende week en de problemen waar wij tegen aan liepen. 
+
+##Meteafoor
+
+![image](https://github.com/user-attachments/assets/491bbdb0-0150-4f04-a683-b7a16bb0af03)
+
 
 ## Beschrijving
 Op de pagina zie je de squadpage van het eerste jaar Frontend Webdevelopment op de HvA. Je ziet hier alle mensen die in een specifiek jaar zijn geboren dit kan je veranderen door aan de slider te drukken. Als je op een avatar van een persoon klikt zie je wat meer informatie over de desbetreffende persoon.
