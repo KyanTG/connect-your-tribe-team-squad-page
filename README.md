@@ -11,6 +11,11 @@ Ontwerp en maak met een team een website met NodeJS en JSON.
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
+##
+
+
+## Stand-up
+
 ## Beschrijving
 Op de pagina zie je de squadpage van het eerste jaar Frontend Webdevelopment op de HvA. Je ziet hier alle mensen die in een specifiek jaar zijn geboren dit kan je veranderen door aan de slider te drukken. Als je op een avatar van een persoon klikt zie je wat meer informatie over de desbetreffende persoon.
 
