@@ -90,7 +90,7 @@ app.get('/ofour', async function (request, response) {
     persons: personResponseJSON.data, 
     twoThousandFour: twoThousandFourResponseJSON.data,
   })
-})
+})  
 
 app.get('/student/:id', async function (request, response) {
   const personDetailResponse = await fetch('https://fdnd.directus.app/items/person/' + request.params.id)
